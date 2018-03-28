@@ -65,7 +65,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "git add"
     ]
