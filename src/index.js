@@ -4,8 +4,8 @@ import { injectGlobal } from 'styled-components';
 
 import { globalStyles } from 'ui/theme';
 
-import nomralize from 'normalize.css/normalize.css';
+import normalize from 'normalize.css/normalize.css';
 
-injectGlobal`${nomralize} ${globalStyles}`;
+injectGlobal`${normalize} ${globalStyles}`;
 
 ReactDOM.render(<div />, document.getElementById('root'));

@@ -1,23 +1,14 @@
-const css = String.raw;
-
-export const placeholder = (...args) => css`
-  &::placeholder {
-    ${ css(...args) }
-  }
-
-  &::-webkit-input-placeholder {
-    ${ css(...args) }
-  }
-
-  &:-moz-placeholder {
-    ${ css(...args) }
-  }
-
-  &::-moz-placeholder {
-    ${ css(...args) }
-  }
-
-  &:-ms-input-placeholder {
-    ${ css(...args) }
-  }
-`;
+export const breakpoints = {
+    up: {
+        xs: 480,
+        sm: 768,
+        md: 1024,
+        lg: 1280,
+    },
+    down: {
+        xs: 479,
+        sm: 767,
+        md: 1023,
+        lg: 1279,
+    },
+};
