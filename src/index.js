@@ -1,8 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { injectGlobal } from 'styled-components';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import { globalStyles } from 'ui/theme';
+
+import nomralize from 'normalize.css/normalize.css';
+
+injectGlobal`${nomralize} ${globalStyles}`;
+
+ReactDOM.render(<div />, document.getElementById('root'));
