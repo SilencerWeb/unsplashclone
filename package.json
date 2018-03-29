@@ -14,6 +14,7 @@
     "styled-components": "^3.2.3"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.15",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -23,6 +24,7 @@
     "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
+    "concurrently": "^3.5.1",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
@@ -61,11 +63,16 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "flow": "clear && flow",
-    "start": "yarn flow && node scripts/start.js",
-    "build": "yarn flow && node scripts/build.js",
-    "deploy": "yarn build && gh-pages -d build",
+    "dev:storybook": "start-storybook -p 3001 -c .storybook",
+    "dev": "flow && concurrently 'yarn dev:storybook' 'node scripts/start.js'",
+    "dev:without-flow": "concurrently 'yarn dev:storybook' 'node scripts/start.js'",
+    "build": "flow && node scripts/build.js",
+    "build:without-flow": "node scripts/build.js",
+    "deploy": "yarn build && yarn gh-pages",
+    "deploy:without-flow": "yarn build:without-flow && yarn gh-pages",
     "test": "node scripts/test.js --env=jsdom",
+    "flow": "flow",
+    "gh-pages": "gh-pages -d build",
     "precommit": "lint-staged"
   },
   "lint-staged": {
