@@ -1,1 +1,2 @@
-export { Icon } from 'ui/atoms/icon';
+export { Icon } from './icon';
+export { Button } from './button';

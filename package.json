@@ -71,13 +71,11 @@
     "deploy": "yarn build && yarn gh-pages",
     "deploy:without-flow": "yarn build:without-flow && yarn gh-pages",
     "test": "node scripts/test.js --env=jsdom",
-    "flow": "flow",
     "gh-pages": "gh-pages -d build",
-    "precommit": "lint-staged"
+    "precommit": "flow && lint-staged"
   },
   "lint-staged": {
     "src/**/*.js": [
-      "yarn flow",
       "prettier --write",
       "git add"
     ]

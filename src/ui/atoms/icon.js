@@ -6,7 +6,7 @@ const SVG = styled.svg`
   display: inline-block;
   vertical-align: top;
 
-  ${p =>
+  ${(p) =>
     p.icon &&
     css`
       width: ${p.icon.node.viewBox.animVal.width / p.icon.node.viewBox.animVal.height}em;
@@ -17,9 +17,9 @@ const SVG = styled.svg`
   fill: currentColor;
 `;
 
-export const Icon = props => {
+export const Icon = (props) => {
   return (
-    <SVG className={props.className}>
+    <SVG className={props.className} icon={props.icon} height={props.height}>
       <use xlinkHref={'#' + props.icon.id} />
     </SVG>
   );
@@ -27,8 +27,10 @@ export const Icon = props => {
 
 Icon.propTypes = {
   className: PropTypes.string,
+  height: PropTypes.number,
 };
 
 Icon.defaultProps = {
   className: null,
+  height: null,
 };
