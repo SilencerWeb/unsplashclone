@@ -23,6 +23,10 @@ export const TextField = styled.input`
   &:focus {
     border-color: ${color.primary};
   }
+
+  &::placeholder {
+    color: ${color.secondary};
+  }
 `;
 
 TextField.propTypes = {};
