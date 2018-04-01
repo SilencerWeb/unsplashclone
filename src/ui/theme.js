@@ -34,8 +34,6 @@ export const globalStyles = css`
     font-weight: 400;
     line-height: 1.6;
     color: ${color.primary};
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 `;
