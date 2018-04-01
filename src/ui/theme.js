@@ -36,4 +36,14 @@ export const globalStyles = css`
     color: ${color.primary};
     overflow-x: hidden;
   }
+
+  a {
+    color: ${color.secondary};
+    text-decoration: underline;
+    transition: ${transition};
+
+    &:hover {
+      color: ${color.primary};
+    }
+  }
 `;
