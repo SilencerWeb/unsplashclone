@@ -26,27 +26,26 @@ const TextFieldWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
+
   ${Label} {
     margin-bottom: 5px;
   }
 
   ${TextFieldWrapper} {
-    margin-bottom: ${(p) => (p.error ? '5px' : '10px')};
+    margin-bottom: ${p => p.error ? '5px' : '10px'};
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  ${(p) =>
-    p.username &&
-    css`
-      input,
-      textarea {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-    `};
+  ${p => p.username && css`
+    input,
+    textarea {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  `};
 `;
 
 const AtSign = styled.div`
@@ -63,40 +62,37 @@ const AtSign = styled.div`
 const Textarea = TextField.withComponent('textarea');
 
 export const Field = (props: props) => {
-  const labelNote = props.label && props.labelNote && <span>&nbsp;({props.labelNote})</span>;
+  const labelNote = props.label && props.labelNote && <span>&nbsp;({ props.labelNote })</span>;
 
-  const label = props.label && (
-    <Label htmlFor={props.id}>
-      {props.label}
-      {labelNote}
-    </Label>
-  );
+  const label = props.label &&
+    <Label htmlFor={ props.id }>
+      { props.label }
+      { labelNote }
+    </Label>;
 
-  const helperTextIcon = !props.error && <Icon icon={info} height={12} />;
+  const helperTextIcon = !props.error && <Icon icon={ info } height={ 12 }/>;
 
-  const helperText = props.helperText && (
-    <HelperText error={props.error}>
-      {helperTextIcon}
-      <span>{props.helperText}</span>
-    </HelperText>
-  );
+  const helperText = props.helperText &&
+    <HelperText error={ props.error }>
+      { helperTextIcon }
+      <span>{ props.helperText }</span>
+    </HelperText>;
 
   const atSign = props.username && <AtSign>@</AtSign>;
 
-  const textField = props.textarea ? (
-    <Textarea id={props.id} placeholder={props.placeholder} />
-  ) : (
-    <TextField id={props.id} placeholder={props.placeholder} />
-  );
+  const textField = props.textarea ?
+    <Textarea id={ props.id } placeholder={ props.placeholder }/>
+    :
+    <TextField id={ props.id } placeholder={ props.placeholder }/>;
 
   return (
-    <Wrapper className={props.className} error={props.error} username={props.username}>
-      {label}
+    <Wrapper className={ props.className } error={ props.error } username={ props.username }>
+      { label }
       <TextFieldWrapper>
-        {atSign}
-        {textField}
+        { atSign }
+        { textField }
       </TextFieldWrapper>
-      {helperText}
+      { helperText }
     </Wrapper>
   );
 };

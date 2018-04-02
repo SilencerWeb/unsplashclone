@@ -8,4 +8,4 @@ import normalize from 'normalize.css/normalize.css';
 
 injectGlobal`${normalize} ${globalStyles}`;
 
-ReactDOM.render(<div />, document.getElementById('root'));
+ReactDOM.render(<div/>, document.getElementById('root'));

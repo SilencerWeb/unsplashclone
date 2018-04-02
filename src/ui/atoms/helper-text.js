@@ -22,19 +22,21 @@ export const HelperText = styled.p`
     vertical-align: middle;
   }
 
-  ${(p) =>
-    p.error &&
-    css`
-      color: ${color.primary};
-      background-color: #f9ded8;
-      border-radius: 4px;
-      padding-top: 3px;
-      padding-right: 9px;
-      padding-bottom: 3px;
-      padding-left: 9px;
-    `};
+  ${p => p.error && css`
+    color: ${color.primary};
+    background-color: #f9ded8;
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-right: 9px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+  `};
 `;
 
-HelperText.propTypes = {};
+HelperText.propTypes = {
+  error: PropTypes.bool,
+};
 
-HelperText.defaultProps = {};
+HelperText.defaultProps = {
+  error: false,
+};

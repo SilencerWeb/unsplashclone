@@ -5,13 +5,17 @@ import { Label } from 'ui/atoms';
 
 storiesOf('Label', module)
   .add('default', () => {
-    return <Label>Interests</Label>;
-  })
+    return (
+      <Label>Label</Label>
+    );
+  });
+
+storiesOf('Label/components', module)
   .add('with note', () => {
     return (
       <Label>
-        Interests
-        <span> (maximum 5)</span>
+        Label
+        <span> (note)</span>
       </Label>
     );
   });

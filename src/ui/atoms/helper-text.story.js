@@ -10,29 +10,30 @@ storiesOf('HelperText', module)
     return (
       <HelperText>
         <span>
-          Your interests are generated from the types of photos you like, collect, and contribute.
-          They will appear on your profile in the next few days.
+          Helper text
         </span>
       </HelperText>
     );
-  })
+  });
+
+storiesOf('HelperText/states', module)
   .add('error', () => {
     return (
       <HelperText error>
         <span>
-          Your interests are generated from the types of photos you like, collect, and contribute.
-          They will appear on your profile in the next few days.
+          Helper text
         </span>
       </HelperText>
     );
-  })
-  .add('icon + text', () => {
+  });
+
+storiesOf('HelperText/components', module)
+  .add('with icon', () => {
     return (
       <HelperText>
-        <Icon icon={info} height={12} />
+        <Icon icon={ info } height={ 12 }/>
         <span>
-          Your interests are generated from the types of photos you like, collect, and contribute.
-          They will appear on your profile in the next few days.
+          Helper text
         </span>
       </HelperText>
     );

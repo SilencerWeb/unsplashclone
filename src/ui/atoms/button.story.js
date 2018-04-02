@@ -9,85 +9,91 @@ storiesOf('Button', module)
   .add('default', () => {
     return (
       <Button>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
-  })
+  });
+
+storiesOf('Button/themes', module)
   .add('black', () => {
     return (
       <Button black>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
-  .add('red', () => {
+  .add('tomato', () => {
     return (
-      <Button red>
-        <span>I'm a button</span>
+      <Button tomato>
+        <span>Button</span>
       </Button>
     );
   })
   .add('blue', () => {
     return (
       <Button blue>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
   .add('green', () => {
     return (
       <Button green>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
   .add('white transparent', () => {
     return (
       <Button whiteTransparent>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
   .add('bordered', () => {
     return (
       <Button bordered>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
   .add('white transparent + bordered + hover black', () => {
     return (
       <Button whiteTransparent hoverBlack bordered>
-        <span>I'm a button</span>
-      </Button>
-    );
-  })
-  .add('disabled', () => {
-    return (
-      <Button disabled>
-        <span>I'm a button</span>
+        <span>Button</span>
       </Button>
     );
   })
   .add('full', () => {
     return (
       <Button full>
-        <span>I'm a button</span>
+        <span>Button</span>
+      </Button>
+    );
+  });
+
+storiesOf('Button/states', module)
+  .add('disabled', () => {
+    return (
+      <Button disabled>
+        <span>Button</span>
+      </Button>
+    );
+  });
+
+storiesOf('Button/components', module)
+  .add('as icon', () => {
+    return (
+      <Button>
+        <Icon icon={ bell } height={ 20 }/>
       </Button>
     );
   })
-  .add('icon', () => {
+  .add('with icon', () => {
     return (
       <Button>
-        <Icon icon={bell} height={20} />
-      </Button>
-    );
-  })
-  .add('icon + text', () => {
-    return (
-      <Button>
-        <Icon icon={bell} height={20} />
-        <span>I'm a button</span>
+        <Icon icon={ bell } height={ 20 }/>
+        <span>Button</span>
       </Button>
     );
   });
