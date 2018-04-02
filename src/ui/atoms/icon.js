@@ -9,7 +9,7 @@ const SVG = styled.svg`
   ${p => p.icon && css`
     width: ${p.icon.node.viewBox.animVal.width / p.icon.node.viewBox.animVal.height}em;
     height: 1em;
-    font-size: ${p.height || p.icon.node.viewBox.animVal.height}px;
+    font-size: ${(p.height || p.icon.node.viewBox.animVal.height) / 10}rem;
   `};
 
   fill: currentColor;

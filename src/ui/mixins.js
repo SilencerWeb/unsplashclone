@@ -1,59 +1,59 @@
 export const breakpoints = {
   up: {
-    xs: 480,
-    sm: 768,
-    md: 1024,
-    lg: 1280,
+    xs: 48,
+    sm: 76.8,
+    md: 102.4,
+    lg: 128,
   },
   down: {
-    xs: 479,
-    sm: 767,
-    md: 1023,
-    lg: 1279,
+    xs: 47.99,
+    sm: 76.79,
+    md: 102.39,
+    lg: 127.99,
   },
 };
 
 export const media = {
   up: {
     xs: (...args) => css`
-      @media (min-width: ${breakpoints.up.xs}px) {
+      @media (min-width: ${breakpoints.up.xs}rem) {
         ${css(...args)};
       }
     `,
     sm: (...args) => css`
-      @media (min-width: ${breakpoints.up.sm}px) {
+      @media (min-width: ${breakpoints.up.sm}rem) {
         ${css(...args)};
       }
     `,
     md: (...args) => css`
-      @media (min-width: ${breakpoints.up.md}px) {
+      @media (min-width: ${breakpoints.up.md}rem) {
         ${css(...args)};
       }
     `,
     lg: (...args) => css`
-      @media (min-width: ${breakpoints.up.lg}px) {
+      @media (min-width: ${breakpoints.up.lg}rem) {
         ${css(...args)};
       }
     `,
   },
   down: {
     xs: (...args) => css`
-      @media (max-width: ${breakpoints.down.xs}px) {
+      @media (max-width: ${breakpoints.down.xs}rem) {
         ${css(...args)};
       }
     `,
     sm: (...args) => css`
-      @media (max-width: ${breakpoints.down.sm}px) {
+      @media (max-width: ${breakpoints.down.sm}rem) {
         ${css(...args)};
       }
     `,
     md: (...args) => css`
-      @media (max-width: ${breakpoints.down.md}px) {
+      @media (max-width: ${breakpoints.down.md}rem) {
         ${css(...args)};
       }
     `,
     lg: (...args) => css`
-      @media (max-width: ${breakpoints.down.lg}px) {
+      @media (max-width: ${breakpoints.down.lg}rem) {
         ${css(...args)};
       }
     `,

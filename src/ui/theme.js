@@ -23,14 +23,15 @@ export const globalStyles = css`
   }
 
   html {
+    font-size: 62.5%;
     -ms-overflow-style: scrollbar;
   }
 
   body {
     position: relative;
-    min-width: 320px;
+    min-width: 32rem;
     font-family: ${font.family.primary};
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.6;
     color: ${color.primary};

@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { color } from 'ui/theme';
 
 export const HelperText = styled.p`
-  font-size: 12px;
+  font-size: 1.2rem;
   color: ${color.secondary};
   margin-top: 0;
   margin-bottom: 0;
 
   svg {
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 0.5rem;
 
     &:last-child {
       margin-right: 0;
@@ -25,11 +25,11 @@ export const HelperText = styled.p`
   ${p => p.error && css`
     color: ${color.primary};
     background-color: #f9ded8;
-    border-radius: 4px;
-    padding-top: 3px;
-    padding-right: 9px;
-    padding-bottom: 3px;
-    padding-left: 9px;
+    border-radius: 0.4rem;
+    padding-top: 0.3rem;
+    padding-right: 0.9rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.9rem;
   `};
 `;
 

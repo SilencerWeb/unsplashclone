@@ -6,17 +6,17 @@ import { color, transition } from 'ui/theme';
 export const Button = styled.button`
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   text-align: center;
   background-color: ${color.tertiary};
   border: none;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   color: ${color.secondary};
-  padding-top: 8px;
-  padding-right: 12px;
-  padding-bottom: 8px;
-  padding-left: 12px;
+  padding-top: 0.8rem;
+  padding-right: 1.2rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.2rem;
   cursor: pointer;
   outline: none;
   transition: ${transition};
@@ -27,7 +27,7 @@ export const Button = styled.button`
   
   svg {
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: 0.8rem;
     
     &:last-child {
       margin-right: 0;
@@ -90,11 +90,11 @@ export const Button = styled.button`
   
   ${p => p.bordered && css`
     color: ${color.secondary};
-    border: 1px solid #dddddd;
-    padding-top: 7px;
-    padding-right: 11px;
-    padding-bottom: 7px;
-    padding-left: 11px;
+    border: 0.1rem solid #dddddd;
+    padding-top: 0.7rem;
+    padding-right: 1.1rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.1rem;
 
     &:hover {
       color: ${color.primary};

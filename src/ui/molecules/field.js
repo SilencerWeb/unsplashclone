@@ -28,11 +28,11 @@ const TextFieldWrapper = styled.div`
 const Wrapper = styled.div`
 
   ${Label} {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
   }
 
   ${TextFieldWrapper} {
-    margin-bottom: ${p => p.error ? '5px' : '10px'};
+    margin-bottom: ${p => p.error ? '0.5' : '1'}rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -49,14 +49,14 @@ const Wrapper = styled.div`
 `;
 
 const AtSign = styled.div`
-  flex: 0 0 30px;
+  flex: 0 0 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${color.secondary};
+  border: 0.1rem solid ${color.secondary};
   border-right: none;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 `;
 
 const Textarea = TextField.withComponent('textarea');
