@@ -5,6 +5,7 @@ import { HelperText, Icon } from 'ui/atoms';
 
 import { info } from 'ui/outlines';
 
+
 storiesOf('HelperText', module)
   .add('default', () => {
     return (
@@ -31,7 +32,7 @@ storiesOf('HelperText/components', module)
   .add('with icon', () => {
     return (
       <HelperText>
-        <Icon icon={ info } height={ 12 }/>
+        <Icon icon={ info } height={ 12 } />
         <span>
           Helper text
         </span>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { color } from 'ui/theme';
 
+
 export const HelperText = styled.p`
   font-size: 1.2rem;
   color: ${color.secondary};
@@ -22,7 +23,7 @@ export const HelperText = styled.p`
     vertical-align: middle;
   }
 
-  ${p => p.error && css`
+  ${(p) => p.error && css`
     color: ${color.primary};
     background-color: #f9ded8;
     border-radius: 0.4rem;

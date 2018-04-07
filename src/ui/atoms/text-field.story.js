@@ -3,17 +3,18 @@ import { storiesOf } from '@storybook/react';
 
 import { TextField } from 'ui/atoms';
 
+
 storiesOf('TextField', module)
   .add('default', () => {
     return (
-      <TextField/>
+      <TextField />
     );
   });
 
 storiesOf('TextField/attributes', module)
   .add('placeholder', () => {
     return (
-      <TextField placeholder={ 'Placeholder' }/>
+      <TextField placeholder={ 'Placeholder' } />
     );
   });
 
@@ -22,13 +23,13 @@ storiesOf('TextField/tags', module)
     const Textarea = TextField.withComponent('textarea');
 
     return (
-      <Textarea/>
+      <Textarea />
     );
   })
   .add('div', () => {
     const Div = TextField.withComponent('div');
 
     return (
-      <Div/>
+      <Div />
     );
   });

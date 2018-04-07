@@ -8,6 +8,7 @@ import { color } from 'ui/theme';
 
 import { info } from 'ui/outlines';
 
+
 type props = {
   id?: string,
   className?: string,
@@ -32,14 +33,14 @@ const Wrapper = styled.div`
   }
 
   ${TextFieldWrapper} {
-    margin-bottom: ${p => p.error ? '0.5' : '1'}rem;
+    margin-bottom: ${(p) => p.error ? '0.5' : '1'}rem;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  ${p => p.username && css`
+  ${(p) => p.username && css`
     input,
     textarea {
       border-top-left-radius: 0;
@@ -70,7 +71,7 @@ export const Field = (props: props) => {
       { labelNote }
     </Label>;
 
-  const helperTextIcon = !props.error && <Icon icon={ info } height={ 12 }/>;
+  const helperTextIcon = !props.error && <Icon icon={ info } height={ 12 } />;
 
   const helperText = props.helperText &&
     <HelperText error={ props.error }>
@@ -81,9 +82,9 @@ export const Field = (props: props) => {
   const atSign = props.username && <AtSign>@</AtSign>;
 
   const textField = props.textarea ?
-    <Textarea id={ props.id } placeholder={ props.placeholder }/>
+    <Textarea id={ props.id } placeholder={ props.placeholder } />
     :
-    <TextField id={ props.id } placeholder={ props.placeholder }/>;
+    <TextField id={ props.id } placeholder={ props.placeholder } />;
 
   return (
     <Wrapper className={ props.className } error={ props.error } username={ props.username }>

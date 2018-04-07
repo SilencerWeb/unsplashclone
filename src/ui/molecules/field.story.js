@@ -3,17 +3,18 @@ import { storiesOf } from '@storybook/react';
 
 import { Field } from 'ui/molecules';
 
+
 storiesOf('Field', module)
   .add('default', () => {
     return (
-      <Field/>
+      <Field />
     );
   });
 
 storiesOf('Field/states', module)
   .add('error', () => {
     return (
-      <Field helperText={ 'Helper text' } error/>
+      <Field helperText={ 'Helper text' } error />
     );
   });
 
@@ -21,37 +22,37 @@ storiesOf('Field/states', module)
 storiesOf('Field/attributes', module)
   .add('placeholder', () => {
     return (
-      <Field placeholder={ 'Placeholder' }/>
+      <Field placeholder={ 'Placeholder' } />
     );
   });
 
 storiesOf('Field/tags', module)
   .add('textarea', () => {
     return (
-      <Field textarea/>
+      <Field textarea />
     );
   });
 
 storiesOf('Field/components', module)
   .add('with label', () => {
     return (
-      <Field id={ 'field' } label={ 'Label' }/>
+      <Field id={ 'field' } label={ 'Label' } />
     );
   })
   .add('with label and note', () => {
     return (
-      <Field id={ 'field' } label={ 'Label' } labelNote={ 'Note' }/>
+      <Field id={ 'field' } label={ 'Label' } labelNote={ 'Note' } />
     );
   })
   .add('with helper text', () => {
     return (
-      <Field helperText={ 'Helper text' }/>
+      <Field helperText={ 'Helper text' } />
     );
   });
 
 storiesOf('Field/other', module)
   .add('username', () => {
     return (
-      <Field username/>
+      <Field username />
     );
   });

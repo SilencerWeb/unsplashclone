@@ -5,6 +5,7 @@ import { Button, Icon } from 'ui/atoms';
 
 import { bell } from 'ui/outlines';
 
+
 storiesOf('Button', module)
   .add('default', () => {
     return (
@@ -85,14 +86,14 @@ storiesOf('Button/components', module)
   .add('as icon', () => {
     return (
       <Button>
-        <Icon icon={ bell } height={ 20 }/>
+        <Icon icon={ bell } height={ 20 } />
       </Button>
     );
   })
   .add('with icon', () => {
     return (
       <Button>
-        <Icon icon={ bell } height={ 20 }/>
+        <Icon icon={ bell } height={ 20 } />
         <span>Button</span>
       </Button>
     );

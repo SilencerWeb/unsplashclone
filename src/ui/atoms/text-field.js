@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { color, transition } from 'ui/theme';
 
+
 export const TextField = styled.input`
   display: inline-block;
   vertical-align: top;

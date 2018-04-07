@@ -15,6 +15,7 @@
     "styled-components": "^3.2.3"
   },
   "devDependencies": {
+    "@atomix/eslint-config-react": "^6.4.0",
     "autoprefixer": "8.2.0",
     "babel-core": "6.26.0",
     "babel-eslint": "^8.2.2",
@@ -29,12 +30,8 @@
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "^4.19.1",
-    "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.39.1",
-    "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "7.4.0",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
@@ -72,9 +69,11 @@
     "deploy:without-flow": "yarn build:without-flow && yarn gh-pages",
     "deploy:with-storybook": "yarn build && yarn build:storybook && yarn gh-pages",
     "deploy:with-storybook:without-flow": "yarn build:without-flow && yarn build:storybook && yarn gh-pages",
+    "lint": "yarn eslint src",
+    "lint:fix": "yarn eslint src --fix",
     "test": "node scripts/test.js --env=jsdom",
     "gh-pages": "gh-pages -d build",
-    "precommit": "flow"
+    "precommit": "flow && yarn lint:fix"
   },
   "pre-commit": [
     "precommit"
@@ -117,8 +116,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

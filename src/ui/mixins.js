@@ -1,3 +1,5 @@
+const css = String.raw;
+
 export const breakpoints = {
   up: {
     xs: 48,

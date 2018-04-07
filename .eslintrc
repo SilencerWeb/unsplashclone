@@ -1,0 +1,36 @@
+{
+  "extends": "@atomix/eslint-config-react",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "rules": {
+    "semi": 0,
+    "arrow-body-style": 0,
+    "operator-linebreak": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "React|PropTypes|styled-components|css|props",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "allow": [
+          "props"
+        ]
+      }
+    ],
+    "react/jsx-curly-spacing": {
+      "when": "always"
+    },
+    "react/jsx-curly-brace-presence": "always",
+    "react/jsx-tag-spacing": "warn"
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  }
+}

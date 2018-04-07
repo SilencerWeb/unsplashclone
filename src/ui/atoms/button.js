@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { color, transition } from 'ui/theme';
 
+
 export const Button = styled.button`
   display: inline-block;
   vertical-align: top;
@@ -38,7 +39,7 @@ export const Button = styled.button`
     vertical-align: middle;
   }
   
-  ${p => p.black && css`
+  ${(p) => p.black && css`
     color: ${color.tertiary};
     background-color: ${color.primary};
 
@@ -48,7 +49,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.tomato && css`
+  ${(p) => p.tomato && css`
     color: ${color.tertiary};
     background-color: #e25c3d;
 
@@ -58,7 +59,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.blue && css`
+  ${(p) => p.blue && css`
     color: ${color.tertiary};
     background-color: #007fff;
 
@@ -68,7 +69,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.green && css`
+  ${(p) => p.green && css`
     color: ${color.tertiary};
     background-color: #3cb46e;
 
@@ -78,7 +79,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.whiteTransparent && css`
+  ${(p) => p.whiteTransparent && css`
     color: #777777;
     background-color: rgba(255, 255, 255, 0.85);
 
@@ -88,7 +89,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.bordered && css`
+  ${(p) => p.bordered && css`
     color: ${color.secondary};
     border: 0.1rem solid #dddddd;
     padding-top: 0.7rem;
@@ -102,7 +103,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.hoverBlack && css`
+  ${(p) => p.hoverBlack && css`
     &:hover {
       color: #000000;
       background-color: ${color.tertiary};
@@ -110,7 +111,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.disabled && css`
+  ${(p) => p.disabled && css`
     color: ${color.tertiary};
     background-color: #dddddd;
     cursor: not-allowed;
@@ -121,7 +122,7 @@ export const Button = styled.button`
     }
   `}
   
-  ${p => p.full && css`
+  ${(p) => p.full && css`
     width: 100%;
   `}
 `;
