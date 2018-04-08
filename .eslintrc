@@ -15,19 +15,13 @@
         "ignoreRestSiblings": false
       }
     ],
-    "no-shadow": [
-      "error",
-      {
-        "allow": [
-          "props"
-        ]
-      }
-    ],
+    "no-shadow": 0,
     "react/jsx-curly-spacing": {
       "when": "always"
     },
     "react/jsx-curly-brace-presence": "always",
-    "react/jsx-tag-spacing": "warn"
+    "react/jsx-tag-spacing": "warn",
+    "react/forbid-prop-types": 0
   },
   "globals": {
     "window": true,

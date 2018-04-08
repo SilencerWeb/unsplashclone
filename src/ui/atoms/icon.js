@@ -26,12 +26,11 @@ export const Icon = (props) => {
 
 Icon.propTypes = {
   className: PropTypes.string,
-  icon: PropTypes.node,
+  icon: PropTypes.any.isRequired,
   height: PropTypes.number,
 };
 
 Icon.defaultProps = {
   className: null,
-  icon: null,
   height: null,
 };
