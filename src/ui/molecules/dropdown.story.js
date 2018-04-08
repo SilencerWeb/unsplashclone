@@ -21,7 +21,7 @@ storiesOf('Dropdown', module)
     <Dropdown links={ links } />
   ));
 
-storiesOf('Dropdown/theme', module)
+storiesOf('Dropdown/themes', module)
   .add('right', () => (
     <Dropdown links={ links } right />
   ));
