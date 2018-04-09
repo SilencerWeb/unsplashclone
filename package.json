@@ -74,7 +74,7 @@
     "lint:fix": "yarn eslint src --fix",
     "test": "node scripts/test.js --env=jsdom",
     "gh-pages": "gh-pages -d build",
-    "precommit": "flow && yarn lint:fix && lint-staged"
+    "precommit": "flow && lint-staged"
   },
   "lint-staged": {
     "src/**/*.js": [
