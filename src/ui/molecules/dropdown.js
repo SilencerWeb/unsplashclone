@@ -32,7 +32,7 @@ type props = {
 const Wrapper = styled.div`
   position: relative;
   background-color: #000000;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   padding-top: 0.9rem;
   padding-right: 1.6rem;
   padding-bottom: 0.9rem;
@@ -42,10 +42,10 @@ const Wrapper = styled.div`
     content: "";
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 2rem;
     width: 0;
     height: 0;
-    border: 5px solid transparent;
+    border: 0.5rem solid transparent;
     border-top-width: 0;
     border-bottom-color: #000000;
     transform: translateY(-100%);
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     
     &:before {
       left: auto;
-      right: 20px;
+      right: 2rem;
     }
   `}
 `;

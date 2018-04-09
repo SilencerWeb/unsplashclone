@@ -21,6 +21,7 @@
     },
     "react/jsx-curly-brace-presence": "always",
     "react/jsx-tag-spacing": "warn",
+    "react/jsx-wrap-multilines": 0,
     "react/forbid-prop-types": 0
   },
   "globals": {

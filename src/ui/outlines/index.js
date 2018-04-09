@@ -8,3 +8,4 @@ export { default as facebook } from './facebook.svg';
 export { default as instagram } from './instagram.svg';
 export { default as medium } from './medium.svg';
 export { default as twitter } from './twitter.svg';
+export { default as search } from './search.svg';

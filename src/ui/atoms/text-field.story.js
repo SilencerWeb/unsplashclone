@@ -12,6 +12,13 @@ storiesOf('TextField', module)
     );
   });
 
+storiesOf('TextField/themes', module)
+  .add('no border', () => {
+    return (
+      <TextField noBorder />
+    );
+  });
+
 storiesOf('TextField/attributes', module)
   .add('placeholder', () => {
     return (

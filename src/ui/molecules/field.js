@@ -19,14 +19,18 @@ type props = {
   error: boolean,
   textarea: boolean,
   username: boolean,
+  noBorder: boolean
 };
 
 const TextFieldWrapper = styled.div`
   display: flex;
   align-items: stretch;
+  width: 100%;
+  height: 100%;
 `;
 
 const Wrapper = styled.div`
+  width: 100%;
 
   ${Label} {
     margin-bottom: 0.5rem;
@@ -82,9 +86,9 @@ export const Field = (props: props) => {
   const atSign = props.username && <AtSign>@</AtSign>;
 
   const textField = props.textarea ?
-    <Textarea id={ props.id } placeholder={ props.placeholder } />
+    <Textarea id={ props.id } placeholder={ props.placeholder } noBorder={ props.noBorder } />
     :
-    <TextField id={ props.id } placeholder={ props.placeholder } />;
+    <TextField id={ props.id } placeholder={ props.placeholder } noBorder={ props.noBorder } />;
 
   return (
     <Wrapper className={ props.className } error={ props.error } username={ props.username }>

@@ -8,6 +8,7 @@ export const TextField = styled.input`
   display: inline-block;
   vertical-align: top;
   width: 100%;
+  height: 100%;
   min-height: 4rem;
   color: ${color.primary};
   background-color: transparent;
@@ -28,8 +29,16 @@ export const TextField = styled.input`
   &::placeholder {
     color: ${color.secondary};
   }
+  
+  ${(p) => p.noBorder && css`
+    border: none;
+  `}
 `;
 
-TextField.propTypes = {};
+TextField.propTypes = {
+  noBorder: PropTypes.bool,
+};
 
-TextField.defaultProps = {};
+TextField.defaultProps = {
+  noBorder: false,
+};
